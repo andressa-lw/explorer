@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 02 JS</title>
+  </head>
+  <body>
+    <script>
+      const students = [
+        {
+          name: "Andressa",
+          grade1: 10,
+          grade2: 7,
+        },
+        {
+          name: "Julio",
+          grade1: 5,
+          grade2: 2.5,
+        },
+        {
+          name: "Manu",
+          grade1: 8,
+          grade2: 7,
+        },
+        {
+          name: "João",
+          grade1: 2,
+          grade2: 3,
+        },
+      ]
+
+      function studentGradeAverage(grade1, grade2) {
+        return ((grade1 + grade2) / 2).toFixed(1)
+      }
+
+      function studentAverageMessage(student) {
+        return `
+          A média do(a) aluno(a) ${student.name} é ${studentGradeAverage(
+          student.grade1,
+          student.grade2
+        )}
+        `
+      }
+
+      for (let student of students) {
+        let passedMessage = studentAverageMessage(student)
+        if (studentGradeAverage(student.grade1, student.grade2) >= 7) {
+          alert(
+            `${passedMessage} Parabéns ${student.name}! Você foi aprovado(a) no concurso!`
+          )
+        } else {
+          alert(
+            `${passedMessage} Não foi dessa vez, ${student.name}! Tente novamente!`
+          )
+        }
+      }
+    </script>
+  </body>
+</html>
