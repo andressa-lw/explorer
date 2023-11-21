@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 01 JS</title>
+  </head>
+  <body>
+    <script>
+      let numberOne = prompt("Digite o primeiro número")
+      let numberTwo = prompt("Digite o segundo número")
+
+      let resultSum = Number(numberOne) + Number(numberTwo)
+      alert("A soma dos dois números é: " + resultSum)
+
+      let resultSub = Number(numberOne) - Number(numberTwo)
+      alert("A subtração dos dois números é: " + resultSub)
+
+      let resultMult = Number(numberOne) * Number(numberTwo)
+      alert("A multiplicação dos dois números é: " + resultMult)
+
+      let resultDiv = Number(numberOne) / Number(numberTwo)
+      alert("A divisão dos dois números é: " + resultDiv)
+
+      let resultRest = Number(numberOne) % Number(numberTwo)
+      alert("O resto da divisão dos dois números é: " + resultRest)
+
+      if (resultSum % 2 === 0) {
+        alert("A soma dos dois números é par")
+      } else {
+        alert("A soma dos dois números é impar")
+      }
+
+      if (Number(numberOne) === Number(numberTwo)) {
+        alert("Os números inseridos são iguais")
+      } else {
+        alert("Os números inseridos são diferentes")
+      }
+    </script>
+  </body>
+</html>
