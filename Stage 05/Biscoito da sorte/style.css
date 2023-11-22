@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 6s ease infinite;
+  background-size: 200% 200%;
+  color: #34355b;
+  font-family: "DM Sans", sans-serif;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 6.4rem;
+}
+
+.box {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  width: min(42.8rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.box h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+.box p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2.6rem;
+}
+
+.box1 img {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.box1 img:hover {
+  animation: vibrate 0.3s linear infinite both;
+}
+
+.box2 .phrase {
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  padding: 1rem;
+  animation: downUp 1s backwards;
+}
+
+.box2 .phrase p {
+  color: #000;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.box2 button {
+  border-radius: 0.4rem;
+  background: #ff9500;
+  padding: 1.6rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.box2 button:hover {
+  background: #e48500;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes vibrate {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes downUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
