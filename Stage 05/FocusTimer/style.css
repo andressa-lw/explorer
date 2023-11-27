@@ -19,8 +19,8 @@ body {
 
 #app {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 4rem;
   place-items: center;
   min-height: 100vh;
   padding: 6.4rem 0;
