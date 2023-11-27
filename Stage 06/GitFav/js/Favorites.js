@@ -31,6 +31,9 @@ export class Favorites {
       this.entries = [user, ...this.entries]
       this.update()
       this.save()
+      if (this.entries.length == 0) {
+        this.removeEmpty()
+      }
     } catch (error) {
       alert(error.message)
     }
@@ -44,6 +47,9 @@ export class Favorites {
     this.entries = filteredEntries
     this.update()
     this.save()
+    if (this.entries.length == 0) {
+      this.removeEmpty()
+    }
   }
 }
 
@@ -68,6 +74,10 @@ export class FavoritesView extends Favorites {
 
   update() {
     this.removeAllTr()
+
+    if (this.entries.length == 0) {
+      this.removeEmpty()
+    }
 
     this.entries.forEach((user) => {
       const row = this.createRow()
@@ -118,5 +128,10 @@ export class FavoritesView extends Favorites {
     this.tbody.querySelectorAll("tr").forEach((tr) => {
       tr.remove()
     })
+  }
+
+  removeEmpty() {
+    const empty = document.querySelector(".empty")
+    empty.classList.remove("hide")
   }
 }
